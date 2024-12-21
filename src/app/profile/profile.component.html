@@ -1,0 +1,14 @@
+<div class="container">
+  <p>Id : {{ employee.eid }}</p>
+  <p>name : {{ employee.ename }}</p>
+  <p>country : {{ employee.address.country }}</p>
+</div>
+<div class="container">
+  <!-- <p>name : {{ employee.ename }}</p>
+  <p>country : {{ employee.address.country }}</p> -->
+  <!-- <button (click)="back(employee.eid)" style="margin-right: 10, 10px">
+    Back
+  </button> -->
+  <button (click)="displayAddress()">View Address</button>
+</div>
+<router-outlet></router-outlet>

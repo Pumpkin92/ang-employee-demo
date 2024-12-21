@@ -1,0 +1,19 @@
+<div *ngIf="employee.length > 0">
+  <div *ngFor="let emp of employee">
+    <app-employee [employee]="emp"> </app-employee>
+    <button (click)="delete(emp)">Delete</button>
+    <button (click)="edit(emp)">Edit</button>
+    <button class="btn btn-primary" (click)="viewProfile(emp.eid)">
+      Profile
+    </button>
+  </div>
+</div>
+
+<div class="container" *ngIf="employee.length == 0">
+  <h1>No employees yet joined your company!!!</h1>
+</div>
+
+<!-- 
+{{employees | json}} 
+this is a pipe
+json is a pipe, converts the employees to string -->

@@ -1,0 +1,33 @@
+<!-- <div class="container mt-3">
+  <h1>{{ title }}</h1>
+  <p>{{ message }}</p>
+  <p innerText="{{ message }}"></p>
+  <p [innerText]="message"></p>
+  <button [disabled]="isEnabled" (click)="clicked()">click</button>
+  <div>
+    <input type="checkbox" (click)="checked()" [(ngModel)]="isEnabled" />
+  </div>
+  <div class="mt-2">
+    <input type="text" [(ngModel)]="username" />
+  </div>
+  <p>Welcome: {{ username }}</p>
+</div>
+<div> -->
+<div>
+  <button (click)="toggleEmpForm()">add Employee</button>
+</div>
+<app-header></app-header>
+<app-empform *ngIf="showEmpForm" (empadded)="newEmpAdded($event)"></app-empform>
+<app-employees [newemp]="newemp"></app-employees>>
+<!-- <h1>App Component</h1>
+<p>{{ service.message }}</p>
+<app-service></app-service>
+<app-observables></app-observables> -->
+<app-footer></app-footer>
+<!-- <app-lifecycle></app-lifecycle> -->
+<!-- one way data binding- can acces from the app.component.ts
+string interpolation - used for data binding syntax -->
+<!-- [()] = bananas in a  box - two way binding syntax
+directive - ngModel, tells angular what to do when something changes, data binding syntax and event binding syntax -->
+
+<!-- <app-pipes></app-pipes> -->

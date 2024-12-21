@@ -1,0 +1,62 @@
+<p>pipes works!</p>
+
+<h3>Pipes Demo</h3>
+
+<h3>decimal pipe</h3>
+<p ngNonBindable>{{ 3.14659265 | number : "3.1-2" }}</p>
+<p>{{ 3.14659265 | number : "3.1-2" }}</p>
+
+<h3>currency pipe</h3>
+<p>{{ 1234.56 | currency : "GBP" : false }}</p>
+<p>{{ 1234.56 | currency : "GBP" : true }}</p>
+<p>{{ locale }}</p>
+
+<h3>date pipes</h3>
+<p>{{ bdate }}</p>
+<p>{{ bdate | date : "short" }}</p>
+<p>{{ bdate | date : "long" }}</p>
+<p>{{ bdate | date : "medium" }}</p>
+
+<h3>json pipes</h3>
+<p>Without JSON pipe:</p>
+<pre>{{ object }}</pre>
+<p>With JSON pipe:</p>
+<pre>{{ object | json }}</pre>
+
+<h3>upper,lower,title</h3>
+<p>{{ "ASIM" | lowercase }}</p>
+Uppercase : Transforms a string to uppercase Example :
+<p>{{ "asim" | uppercase }}</p>
+<h1>Purchases from {{ company | titlecase }}</h1>
+
+<h3>Percent Pipe</h3>
+<p ngNonBindable>{{ 0.123456 | percent }}</p>
+<p>{{ 0.123456 | percent }}</p>
+//12.346%
+<p ngNonBindable>{{ 0.123456 | percent : "2.1-2" }}</p>
+<p>{{ 0.123456 | percent : "2.1-2" }}</p>
+//12.35%
+<p ngNonBindable>{{ 42 | percent : "10.4-4" }}</p>
+<p>{{ 0.123456 | percent : "10.4-4" }}</p>
+
+<h3>slice Pipe</h3>
+<p ngNonBindable>{{ [1, 2, 3, 4, 5, 6] | slice : 1 : 3 }}</p>
+<p>{{ [1, 2, 3, 4, 5, 6] | slice : 1 : 3 }}</p>
+//2,3
+<p ngNonBindable>{{ [1, 2, 3, 4, 5, 6] | slice : 2 }}</p>
+<p>{{ [1, 2, 3, 4, 5, 6] | slice : 2 }}</p>
+//3,4,5,6
+<p ngNonBindable>{{ [1, 2, 3, 4, 5, 6] | slice : 2 : -1 }}</p>
+<p>{{ [1, 2, 3, 4, 5, 6] | slice : 2 : -1 }}</p>
+//3,4,5
+
+<ul>
+  // 3 4 5
+  <li *ngFor="let v of [1, 2, 3, 4, 5, 6] | slice : 2 : -1">
+    {{ v }}
+  </li>
+</ul>
+
+<h3>Async Pipe:</h3>
+Async:
+<p>{{ x | async }}</p>
